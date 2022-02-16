@@ -5,7 +5,7 @@
 let storeHours = ['6am','7am', '8am','9am','10am','11am','12pm','1pm', '2pm','3pm','4pm','5pm','6pm','7pm'];
 let locationList = []; // this will store all locations created by constructor
 
-let table = document.getElementById('table');
+const parentElement = document.getElementById('table');
 
 
 
@@ -18,7 +18,7 @@ function City(location, minCustHour, maxCustHour, avgCookieCust){
   this.totalCookies = 0;
   this.hourlySales = [];
 
-  locationList.push(this);
+  locationList.push(this); // store any object that gets created in this function
 
 }
 
@@ -55,17 +55,19 @@ City.prototype.calcHourlySales = function(){
 City.prototype.renderCity = function (){
   this.calcHourlySales();
   let tableRow = document.createElement('tr');
-  table.appendChild(tableRow);
   let locationBox = document.createElement('td');
   locationBox.textContent = this.location;
-  // console.log(this.location);
+  console.log(this.location);
   tableRow.appendChild(locationBox);
-  // for (let i = 0; 1 < storeHours.length; i++){
-  //   let td = document.createElement('td');
-  //   td.textContent = this.hourlySales[i];
-  //   tr.appendChild(td);
-  // }
-
+  for (let i = 0; 1 < this.hourlySales.length; i++){
+    let td = document.createElement('td');
+    td.textContent = this.hourlySales[i];
+    tableRow.appendChild(td);
+  }
+  locationBox = document.createElement('td');
+  locationBox.textContent = this.totalCookies;
+  tableRow.appendChile.locationBox;
+  parentElement.appendChild(tableRow);
 
 };
 
@@ -303,23 +305,38 @@ City.prototype.renderCity = function (){
 // console.log(lima.hourlySales);
 
 
-let Seattle = new City('Seattle', 23, 65, 6.3);
+let seattle = new City('Seattle', 23, 65, 6.3);
+// seattle.custPerHour();
+// seattle.totalCookies();
+// seattle.hourlySales();
 
 
 
-let Tokyo = new City('Tokyo', 3, 24, 1.2);
+let tokyo = new City('Tokyo', 3, 24, 1.2);
+// tokyo.custPerHour();
+// tokyo.totalCookies();
+// tokyo.hourlySales();
 
 
 
-let Dubai = new City('Dubai', 11, 28, 3.7);
+let dubai = new City('Dubai', 11, 28, 3.7);
+// dubai.custPerHour();
+// dubai.totalCookies();
+// dubai.hourlySales();
 
 
 
-let Paris = new City('Paris', 20, 38, 2.3);
+let paris = new City('Paris', 20, 38, 2.3);
+// paris.custPerHour();
+// paris.totalCookies();
+// paris.hourlySales();
 
 
 
-let Lima = new City('Lima', 2, 16, 4.6);
+let lima = new City('Lima', 2, 16, 4.6);
+// lima.custPerHour();
+// lima.totalCookies();
+// lima.hourlySales();
 // console.log(seattle, tokyo, dubai, paris, lima);
 
 
@@ -332,6 +349,6 @@ function salesPerHour(max,min){
 }
 
 for (let i=0; i < locationList.length; i++){
-  console.log(locationList);
+  // console.log(locationList);
 }
-Seattle.renderCity();
+// Seattle.renderCity();
