@@ -59,7 +59,7 @@ City.prototype.renderCity = function (){
   locationBox.textContent = this.location;
   console.log(this.location);
   tableRow.appendChild(locationBox);
-  for (let i = 0; 1 < this.hourlySales.length; i++){
+  for (let i = 0; i < this.hourlySales.length; i++){
     let td = document.createElement('td');
     td.textContent = this.hourlySales[i];
     tableRow.appendChild(td);
@@ -70,6 +70,30 @@ City.prototype.renderCity = function (){
   parentElement.appendChild(tableRow);
 
 };
+
+function renderHeader (){
+  let tableHeader = document.createElement('thead');
+  parentElement.appendChild(tableHeader);
+  let tableRow = document.createElement('tr');
+  tableHeader.appendChild(tableRow);
+  let tableCell = document.createElement('td');
+  tableCell.textContent = '';
+  tableRow.appendChild(tableCell);
+  for (let i = 0; i < storeHours.length; i++){
+    let td = document.createElement('td');
+    td.textContent = storeHours[i];
+    tableRow.appendChild(td);
+  }
+  let totalCell = document.createElement('td');
+  totalCell.textContent = 'Daily Totals';
+  tableRow.appendChild(totalCell);
+}
+renderHeader();
+
+function renderFooter (){
+  let tableFooter = document.createElement('tfoot');
+  
+}
 
 let seattle = new City('Seattle', 23, 65, 6.3);
 // seattle.custPerHour();
