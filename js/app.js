@@ -90,10 +90,27 @@ function renderHeader (){
 }
 renderHeader();
 
-function renderFooter (){
-  let tableFooter = document.createElement('tfoot');
+// footer attempt
+
+// function renderFooter (){
+//   let tableFooter = document.createElement('tfoot');
+//   parentElement.appendChild(tableFooter);
+//   let tableRow = document.createElement('tr');
+//   tableFooter.appendChild(tableRow);
+//   let tableCell = document.createElement('td');
+//   tableCell.textContent = 'Cookie Totals';
+//   for (let i = 0; i < storeHours.length; i++){
+//     let td = document.createElement('td');
+//     td.textContent = storeHours[i];
+//     tableRow.appendChild(td);
+//   for (let i = 0; i < hourlySales.length; i++);{
+    
+//   }
+//   }
   
-}
+//   }
+  
+// }
 
 let seattle = new City('Seattle', 23, 65, 6.3);
 // seattle.custPerHour();
