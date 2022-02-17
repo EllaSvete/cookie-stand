@@ -2,14 +2,14 @@
 
 //array of times of the day people will go in:
 
-let storeHours = ['6am','7am', '8am','9am','10am','11am','12pm','1pm', '2pm','3pm','4pm','5pm','6pm','7pm'];
+let storeHours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 let locationList = []; // this will store all locations created by constructor
 
 const parentElement = document.getElementById('table');
 
 
 
-function City(location, minCustHour, maxCustHour, avgCookieCust){
+function City(location, minCustHour, maxCustHour, avgCookieCust) {
   this.location = location;
   this.minCustHour = minCustHour;
   this.maxCustHour = maxCustHour;
@@ -22,18 +22,18 @@ function City(location, minCustHour, maxCustHour, avgCookieCust){
 
 }
 
-City.prototype.genCustomers = function() {
-  for (let i = 0; i < storeHours.length; i++){
-    this.custPerHour.push (randomCustNumber(this.minCustHour, this.maxCustHour));
+City.prototype.genCustomers = function () {
+  for (let i = 0; i < storeHours.length; i++) {
+    this.custPerHour.push(randomCustNumber(this.minCustHour, this.maxCustHour));
     // console.log(this.custPerHour);
   }
 };
 
-City.prototype.calcHourlySales = function(){
+City.prototype.calcHourlySales = function () {
   this.genCustomers();
   // loop over hours array
-  for (let i = 0; i < storeHours.length; i++){
-    this.hourlySales.push (Math.ceil(this.custPerHour[i] * this.avgCookieCust));
+  for (let i = 0; i < storeHours.length; i++) {
+    this.hourlySales.push(Math.ceil(this.custPerHour[i] * this.avgCookieCust));
     this.totalCookies += (this.hourlySales[i]);
   }
 };
@@ -52,14 +52,14 @@ City.prototype.calcHourlySales = function(){
 
 // }
 
-City.prototype.renderCity = function (){
+City.prototype.renderCity = function () {
   this.calcHourlySales();
   let tableRow = document.createElement('tr');
   let locationBox = document.createElement('td');
   locationBox.textContent = this.location;
   console.log(this.location);
   tableRow.appendChild(locationBox);
-  for (let i = 0; i < this.hourlySales.length; i++){
+  for (let i = 0; i < this.hourlySales.length; i++) {
     let td = document.createElement('td');
     td.textContent = this.hourlySales[i];
     tableRow.appendChild(td);
@@ -71,7 +71,7 @@ City.prototype.renderCity = function (){
 
 };
 
-function renderHeader (){
+function renderHeader() {
   let tableHeader = document.createElement('thead');
   parentElement.appendChild(tableHeader);
   let tableRow = document.createElement('tr');
@@ -79,7 +79,7 @@ function renderHeader (){
   let tableCell = document.createElement('td');
   tableCell.textContent = '';
   tableRow.appendChild(tableCell);
-  for (let i = 0; i < storeHours.length; i++){
+  for (let i = 0; i < storeHours.length; i++) {
     let td = document.createElement('td');
     td.textContent = storeHours[i];
     tableRow.appendChild(td);
@@ -90,10 +90,37 @@ function renderHeader (){
 }
 renderHeader();
 
-function renderFooter (){
+// footer attempt
+
+function renderFooter() {
   let tableFooter = document.createElement('tfoot');
-  
+  parentElement.appendChild(tableFooter);
+  let tableRow = document.createElement('tr');
+  tableFooter.appendChild(tableRow);
+  let tableCell = document.createElement('td');
+  tableCell.textContent = 'Cookie Totals';
+  tableRow.appendChild(tableCell);
+  let grandTotal = 0;
+  for (let i = 0; i < storeHours.length; i++) {
+    // console.log(`i loop ${i}`);
+    // console.log(`hours ${storeHours[i]}`);
+    let hourTotal = 0;
+    for (let j = 0; j < locationList.length; j++) {
+      // console.log(`j loop ${j}`);
+      // console.log(`locations ${locationList[j].location}`);
+      hourTotal += locationList[j].hourlySales[i];
+      grandTotal += hourTotal;
+    }
+    let tableData = document.createElement('td');
+    tableData.textContent = hourTotal;
+    tableRow.appendChild(tableData);
+  }
+  let totalData = document.createElement('td');
+  totalData.textContent = grandTotal;
+  tableRow.appendChild(totalData);
+
 }
+
 
 let seattle = new City('Seattle', 23, 65, 6.3);
 // seattle.custPerHour();
@@ -146,6 +173,7 @@ tokyo.renderCity();
 dubai.renderCity();
 paris.renderCity();
 lima.renderCity();
+renderFooter();
 
 // City.prototype.render = function() {
 
