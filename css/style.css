@@ -1,10 +1,106 @@
+/* table styling */
+
 table {
 border: 2px solid black;
+margin:auto;
+margin-top: 50px;
+
+}
+
+table tr {
+  line-height: 2em;
+}
+
+thead tr td{
+  font-size: 18px;
+  word-spacing: 1px;
+  padding: 5px;
+
+}
+
+/* header */
+
+/* .png {
+  width: 200px;
+  height: 120px;
+}
+
+.png img {
+  width: 100px;
+  height: auto; */
+
+}
+
+nav {
+  width: 960px;
+  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom:auto
+}
+
+header {
+  border: 2px solid rgb(231, 162, 32);
+  height:150px;
+  margin-bottom: 30px;
+  background-color: bisque;
+  display:flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+#fish {
+  width: 200px;
+}
+
+header ul li {
+  text-align: center;
+  margin-top: 5px;
 }
 
 h1 {
   font-family: Arial, Helvetica, sans-serif;
   color: salmon;
-  text-align: center;
   font-size: 30px;
+  
+}
+
+/* main styling */
+
+main {
+  display: flex;
+}
+
+#family {
+  width: 400px;
+  border: 1px, solid black;
+}
+
+h2 {
+  font-size: 20px;
+  color: rgb(30, 80, 11);
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 20px;;
+}
+
+p{
+  line-height:120%;
+  letter-spacing: normal;
+  text-indent: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(41, 48, 46)
+}
+
+main ul li {
+  font-size: 16px;
+  font-family: monospace;
+  margin-top: 8px;
+  line-height: 2em;
+  list-style-type: circle;
+  color:rgb(41, 48, 46)
 }
