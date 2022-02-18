@@ -29,7 +29,7 @@ thead tr td{
   width: 100px;
   height: auto; */
 
-}
+/* } */
 
 nav {
   width: 960px;
@@ -103,4 +103,11 @@ main ul li {
   line-height: 2em;
   list-style-type: circle;
   color:rgb(41, 48, 46)
+}
+
+#headerOne {
+  font-family: Arial, Helvetica, sans-serif;
+  color: salmon;
+  font-size: 30px;
+
 }
