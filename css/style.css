@@ -2,9 +2,13 @@
 
 table {
 border: 2px solid black;
-margin:auto;
-margin-top: 50px;
-
+margin: auto;
+margin-bottom: 60px;
+/* margin:auto;
+margin-top: 8%;
+margin-right: 50%;
+margin-left: 10%;
+flex-direction:row; */
 }
 
 table tr {
@@ -18,25 +22,67 @@ thead tr td{
 
 }
 
-/* header */
+#location-form {
+  margin: auto;
+  max-width: fit-content;
 
-/* .png {
-  width: 200px;
-  height: 120px;
 }
 
-.png img {
-  width: 100px;
-  height: auto; */
+fieldset {
+width: 310px;
+border: 1px solid brown;
+line-height: 1.8em;
+padding-top: 1em;
+padding-bottom: 1em;
+padding-left: 1em;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin: 3em;
+/* flex-direction: row; */
+}
 
-/* } */
+legend {
+  font-size: 20px;
+  color:brown;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+}
+label {
+  display: block;
+
+}
+/* section div div {
+  background-color: #000;
+  color: #fff;
+  width: max-content;
+  padding: 10px 30px;
+  margin-top: 34px;
+  transition: 350ms;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+
+#button:hover{
+  border: 1px solid rgb(240, 11, 145);
+  cursor: pointer;
+  
+}
+
+#button {
+  float: right;
+  margin-right: 43px;
+}
+
+
+
 
 nav {
   width: 960px;
   margin: auto;
   text-align: center;
   margin-top: 30px;
-  margin-bottom:auto
+  margin-bottom:auto;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -60,40 +106,66 @@ header ul li {
   margin-top: 5px;
 }
 
+div ul {
+  text-align: center;
+  margin-top: 5px;
+}
+
 h1 {
   font-family: Arial, Helvetica, sans-serif;
-  color: salmon;
+  color: rgb(236, 123, 85);
   font-size: 30px;
+  justify-content: space-around;
   
 }
 
 /* main styling */
 
+/* body{
+  margin: auto
+} */
+
+
+
 main {
-  display: flex;
+  border: solid black 2px;
+  width: 960px;
+  /* justify-content: center; */
+  margin: auto;
+  background-color: rgb(216, 134, 12);
+  /* align-items: center; */
 }
 
 #family {
   width: 400px;
   border: 1px, solid black;
+  display: flex;
+  float: right;
+  margin-right: 20px;
+  margin-top: 200px;
+
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 40px;
   color: rgb(30, 80, 11);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: 'Great Vibes', cursive;
   text-align: center;
   padding-top: 20px;;
 }
 
 p{
-  line-height:120%;
+  line-height:200%;
   letter-spacing: normal;
   text-indent: 50px;
   text-align: center;
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-  color:rgb(41, 48, 46)
+  font-family: 'Josefin Sans', sans-serif;
+  color:rgb(41, 48, 46);
+  padding-left: 100px;
+  padding-right: 100px;
+ margin-bottom: 40px;
+ 
 }
 
 main ul li {
@@ -101,13 +173,19 @@ main ul li {
   font-family: monospace;
   margin-top: 8px;
   line-height: 2em;
-  list-style-type: circle;
   color:rgb(41, 48, 46)
 }
 
-#headerOne {
+/* #headerOne {
   font-family: Arial, Helvetica, sans-serif;
   color: salmon;
   font-size: 30px;
 
+} */
+
+.img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
 }
+
