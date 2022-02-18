@@ -6,9 +6,36 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body id="sales">
-    <h1>Salmon Cookies</h1>
+    <h1 id="headerOne">Salmon Cookie Stand Locations</h1>
     <main>
-      <h2></h2>
+      <form id="location-form">
+        <fieldset>
+          <legend>Add Location</legend>
+          <label for="location">Location:</label>
+          <input id="location" name="location" type="text"/>
+          <!-- <input type="text" name="locationName" id="name"> -->
+
+          <label for="minCustHour">Minimum Customers Per Hour:</label>
+          <input id="minCustHour" name="minCustHour" type="text"/>
+
+          <label for="maxCustHour">Maximum Customers Per Hour:</label>
+          <input id="maxCusHour" name="maxCustHour" type="text"/>
+
+
+          <label for="avgCookieCust">Average Cookie Per Customer:</label>
+          <input id="avegCookieCust" name="avgCookieCust" type="text"/>
+
+          <!-- <label for="custPerHour">Customers Per Hour</label>
+          <input id="custPerHour" name="custPerHour" type="text"/> -->
+
+          <!-- <label for="hourlySales">Sales Per Hour</label>
+          <input id="hourlySales" name="hourlySales" type="text"/> -->
+<!-- 
+          <label for="totalCookies">Total Cookies</label>
+          <input id="totalCookies" name="'totalCookies" type="text"/> -->
+        </fieldset>
+        <input type="submit"/>
+      </form>
       <section>
         <table id="table">
 
