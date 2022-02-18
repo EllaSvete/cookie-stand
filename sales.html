@@ -5,10 +5,53 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body id="sales">
+  <header>
+    <img id="fish" src="img/salmon.png" alt="chinook salmon">
     <h1>Salmon Cookies</h1>
+    <nav>
+       <ul>
+        <li><a href="sales.html">Sales Stats</a></li>
+        <li><a href="#">Locations</a></li>
+        <li><a href="#">About Us</a></li> 
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html">Home</a></li>
+       </ul>
+    </nav>
+   
+    
+  </header>
+  <body id="sales">
     <main>
-      <h2></h2>
+      <div>
+      <form id="location-form">
+        <fieldset>
+          <legend>Add Location</legend>
+          <label for="location">Location:</label>
+          <input id="location" name="location" type="text"/>
+          <!-- <input type="text" name="locationName" id="name"> -->
+
+          <label for="minCustHour">Minimum Customers Per Hour:</label>
+          <input id="minCustHour" name="minCustHour" type="text"/>
+
+          <label for="maxCustHour">Maximum Customers Per Hour:</label>
+          <input id="maxCusHour" name="maxCustHour" type="text"/>
+
+
+          <label for="avgCookieCust">Average Cookie Per Customer:</label>
+          <input id="avegCookieCust" name="avgCookieCust" type="text"/>
+
+          <!-- <label for="custPerHour">Customers Per Hour</label>
+          <input id="custPerHour" name="custPerHour" type="text"/> -->
+
+          <!-- <label for="hourlySales">Sales Per Hour</label>
+          <input id="hourlySales" name="hourlySales" type="text"/> -->
+<!-- 
+          <label for="totalCookies">Total Cookies</label>
+          <input id="totalCookies" name="'totalCookies" type="text"/> -->
+          <input id="button" type="submit"/>
+        </fieldset>
+      </form>
+    </div>
       <section>
         <table id="table">
 
